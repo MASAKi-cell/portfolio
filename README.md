@@ -1,7 +1,7 @@
 # 転職活動用のportfolioサイト
 
-■ 担当：デザイン、コーディング
-■ 使用ソフト：illustrator,Xd,VScode
+#■ 担当：デザイン、コーディング
+#■ 使用ソフト：illustrator,Xd,VScode
 ■ 仕様スキル：HTML,CSS,JavaScript,jQuery,WordPress
 
 ■ 工夫
