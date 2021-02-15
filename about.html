@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: サイトURL#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAKAHASHI MASAKI Portfolio Site</title>
+    <meta name="description" content="" />
+    <!--PC：１２０文字以内 スマホ：70文字以内-->
+    <!--ここからOGP-->
+    <meta property="og:url" content=" ページの URL" />
+    <meta property="og:type" content=" ページの種類" />
+    <!--website /blog 下層→article-->
+    <meta property="og:title" content=" ページの タイトル" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content=" サムネイル画像の URL" />
+    <!--//OGPここまで-->
+
+    <!--CSSのリンク-->
+    <link rel="stylesheet" href="common/css/reset.css" />
+    <link rel="stylesheet" href="common/css/style.css" />
+    <!--slick CSSのリンク-->
+    <link rel="stylesheet" type="text/css" href="common/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/slick-theme.css" />
+  </head>
+
+  <body>
+    <!--ここからheaderー-->
+    <header class="ly_header">
+      <div class="header_inner">
+        <div class="header_inner_flex">
+          <div>
+            <h1 class="header_ttl">MASAKi Portfolio</h1>
+          </div>
+          <!--ナビゲーション-->
+          <nav class="el_nav">
+            <ul class="el_navLists flex_box">
+              <li class="el_navList"><a href="#">トップページ</a></li>
+              <li class="el_navList"><a href="#">ブログ</a></li>
+              <li class="el_navList"><a href="#">制作物</a></li>
+              <li class="el_navList"><a href="#">私について</a></li>
+              <li class="el_navList"><a href="#">お問い合わせ</a></li>
+              <li class="el_navList el_navListTwitter"><a href="https://twitter.com/bje351493"><img src="icon/twitte_icon.png" alt="Twitterのロゴ"></a></li>
+              <li class="el_navList el_navListGithub"><a href="https://github.com/MASAKi-cell"><img src="icon/Github_icon.png" alt="Githubのロゴ"></a></li>
+            </ul>
+          </nav>
+        </div><!--/.flex_box-->
+
+        <!--hamburgerボタンー-->
+        <di class="js_hamburger_btn">
+          <span class="js_hamburger_btnParts top"></span>
+          <span class="js_hamburger_btnParts middle"></span>
+          <span class="js_hamburger_btnParts bottom"></span>
+        </di>
+        <!--hamburgerメニュー-->
+        <nav class="js_hamburger">
+          <ul class="js_hamburger_lists">
+            <li class="js_hamburger_list">
+              <a class="js_hamburger_link" href="#">トップページ</a>
+            </li>
+            <li class="js_hamburger_list">
+              <a class="js_hamburger_link" href="#">ブログ</a>
+            </li>
+            <li class="js_hamburger_list">
+              <a class="js_hamburger_link" href="#">制作物</a>
+            </li>
+            <li class="js_hamburger_list">
+              <a class="js_hamburger_link" href="#">私について</a>
+            </li>
+            <li class="js_hamburger_list">
+              <a class="js_hamburger_link" href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+        <!--//ここまでナビゲーション-->
+      </div> <!--/.header_inner-->
+    </header>
+    <!--//ここまでヘッダー-->
+
+    <!--ここからメインコンテンツ-->
+    <main class="main">
+
+      <!--ここからファーストビュー -->
+      <!--ここからmy Profile-->
+      <section class="sect sect_about">
+        <div class="sect_inner flex_box">
+          <div class="sect_ttl js_scroll_trigger el_fadeIn">            
+            <h2 class="sect_ttlMain">my Profile</h2>
+            <div class="bl_about_img js_scroll_trigger el_fadeIn">
+              <img class="hp_imgInner" src="common/img/my__top.jpg" alt="my image icon">
+            </div> <!--/.bl_about_img-->
+            <div class="bl_about_txtInner">
+              <p>■ 名前  ： 高橋 正樹  Takahashi Masaki</p>
+              <p>■ 誕生日： 1990年12月</p>
+              <p>■ 所在地：         東京都</p>
+              <p>■ お問い合わせ先 ： bje35149@gmail.com</p>
+              <p>■ポートフォリオサイト：<a href="https://twitter.com/bje351493">Takahashi Masaki Protfolie</a></p>
+              <p>■ Twitter：<a href="https://twitter.com/bje351493">@bje351493</a></p>
+              <p>■ GitHub ：<a href="https://github.com/MASAKi-cell">MASAKi-cell</a></p>
+              <p>■Qiita： </p>
+              <p>■趣味(好きなもの)：読書、登山、チョークアート、筋トレ</p>
+              <p class="bl_about_txtSkill">Skill</p>
+              <p>HTML,CSS(Sass),JavaScript,jQuery,Vue.js,Node.js,WordPress<p>
+              <p>Photoshop,Xd,Illustrator,Dreamweaver,Vscode,Slack</p>
+          </div> <!--/.sect_inner-->
+          <div class="bl_about_wrapper">
+              <div class="bl_about_txt js_scroll_trigger el_fadeIn">
+                <div class="bl_about_txtInner">
+                  <p class="bl_about_txtFrist">自己紹介</p>
+                  <p>仕事を通じてデザイン・コーディングの楽しさを知り、</p>
+                  <p>2020年1月より、Webデザインの勉強を本格的に始める。</p>
+                  <p>UX/UIデザインを意識しつつ、丁寧なヒアリングで</p>
+                  <p>お客様の課題を解決できるデザイナーになれるように学習中。</p>
+                  <p>チョークアート、登山、筋トレ、読書が趣味。</p>
+                </div> <!--/.bl_about_txt-->
+              </div> <!--/.bl_about_wrapper .flex_box-->
+          </div> <!--/.sect .sect_about-->
+        </div>
+      </section>
+      <!--//ここまでmy Profile-->
+      <!--//ここまでファーストビュー -->
+
+      <!--ここからセクション-->
+      <!--//ここからcareer-->
+      <section class="sect sect_career">
+        <div class="sect_inner">
+          <div class="sect_ttl">
+            <h2 class="sect_ttlMain">Career</h2>
+            <p class="sect_ttlSub">経歴</p>
+          </div>
+      </div>
+      </section>
+      <!--//ここまでcareer-->
+
+      <!--//ここからskill-->
+      <section class="sect sect_career">
+        <div class="sect_inner">
+          <div class="sect_ttl js_scroll_trigger el_fadeIn">
+            <h2 class="sect_ttlMain">skill</h2>
+            <p class="sect_ttlSub">得意なこと</p>
+          </div>
+          <div>
+            <div>
+              <div></div>
+              <div class="">
+                <p>課題解決能力</p>
+              </div>
+            </div>
+            <div>
+              <div></div>
+              <div>
+                <p>自走力/継続力</p>
+                <p>2019年より学習を開始し、2020年からは、毎週30時間、月120時間を継続して勉強しています。 <p>
+                <p>Twitterに毎日学習状況をアップしています。</p>
+                <p>またGithubにも毎日草をはやしています。</p>
+                <p>学習したら、Qiitaやブログで記事を執筆しアウトプットを行いました。</p>
+              </div>
+            </div>
+            <div>
+              <div></div>
+              <div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--//ここまでskill-->
+
+      <!--//ここからVision-->
+      <section class="sect sect_career">
+        <div class="sect_inner">
+          <div class="sect_ttl js_scroll_trigger el_fadeIn">
+            <h2 class="sect_ttlMain">Vision</h2>
+            <p class="sect_ttlSub">これからのこと</p>
+          </div>
+      </div>
+      </section>
+      <!--//ここまでVision-->
+
+
+      <!--//ここからcontact-->
+      <section class="sect sect_contact">
+        <div class="sect_inner">
+          <div class="sect_ttl js_scroll_trigger el_fadeIn">
+            <h2 class="sect_ttlMain">Contact</h2>
+            <p class="sect_ttlSub">お問い合わせ</p>
+          </div>
+
+          <div class="bl_contact_txt js_scroll_trigger el_fadeIn">
+            <p>Web制作のご質問やご相談はお気軽にお問い合わせ下さいませ</p>
+              <span class="bl_contact_tel">03-1234-5678</span>
+            </p>
+          </div>
+          </div>
+
+          <a href="#" class="el_btn el_btn_hp js_scroll_trigger el_fadeIn"> <!--ボタン-->
+            <span type="submit" class="el_btn_border">お問い合わせ</span>
+          </a>
+      </div>
+    </section>
+    <!--//ここまでcontact-->
+    <!--//ここまでセクション-->
+    </main>
+    
+    <!--ここからfooter-->
+    <footer class="ly_footer js_scroll_trigger el_fadeIn">
+      <div class="ly_footer_fv">
+      </div>
+      <small>&copy;2021 TAKAHASHI MASAKI</small>
+    </footer>
+    <!--//ここまでfooter-->
+
+    <!--jQuery読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/script.js"></script>
+  </body>
+</html>
