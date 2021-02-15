@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: サイトURL#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAKAHASHI MASAKI Protfolio Site</title>
+    <meta name="description" content="" />
+    <!--PC：120文字以内 スマホ：70文字以内-->
+    <!--ここからOGP-->
+    <meta property="og:url" content=" ページの URL" />
+    <meta property="og:type" content=" ページの種類" />
+    <!--website /blog 下層→article-->
+    <meta property="og:title" content=" ページの タイトル" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content=" サムネイル画像の URL" />
+    <!--//OGPここまで-->
+    <link rel="stylesheet" href="common/css/style.css" />
+  </head>
+
+  <body>
+     <!--ここからheaderー-->
+     <header class="header">
+      <div class="header__inner">
+        <h1 class="header__title"></h1>
+        <!--ナビゲーション-->
+        <nav class="nav">
+          <ul class="nav__lists">
+            <li class="nav__list"><a href="#">トップページ</a></li>
+            <li class="nav__list"><a href="#">ブログ</a></li>
+            <li class="nav__list"><a href="#">制作物</a></li>
+            <li class="nav__list"><a href="#">私について</a></li>
+            <li class="nav__list"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!--hamburgerボタンー-->
+        <div class="hamburger__btn">
+          <span class="hamburger__btnParts top"></span>
+          <span class="hamburger__btnParts middle"></span>
+          <span class="hamburger__btnParts bottom"></span>
+        </div>
+        <!--hamburgerメニュー-->
+        <nav class="hamburger">
+          <ul class="hamburger__lists">
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">トップページ</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">ブログ</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">制作物</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">私について</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+        <!--//ここまでナビゲーション-->
+      </div>
+    </header>
+    <!--//ここまでヘッダー-->
+
+    <!--ここからメインコンテンツ-->
+    <main class="main">
+      <!--ここからセクション-->
+        <section class="section__contact">
+          <div>
+            <h2 class="section__title">Contact</h2>
+            <p class="section__titleSub">お問い合わせ</p>
+          </div>
+        <!--ここからお問い合わせフォーム-->
+        <div class="section__inner">
+          <div class="contact__inner">
+                <p>
+                  これまでお読み頂いてありがとうございます。
+                  ご興味を持って頂き、ご依頼やご相談についてのご要望がございましたら、
+                  下記お問い合わせフォームよりお気軽にご相談下さいませ。
+                </p>
+                <span>TEL: 03-1234-5678</span>
+          <form action="#" method="">   
+            <ul class="form__list">
+                <li class="form__item">
+                  <div class="form__itemTitle">
+                      <label for="company__name">お名前・会社名</label>
+                      <span class="required">必須</span>
+                  </div>
+                  <input type="text" class="text__box" id="company__name">
+                </li>
+                <li class="form__item">
+                    <div class="form__itemTitle">
+                        <label for="mail">メールアドレス</label>
+                        <span class="required">必須</span>
+                    </div>
+                    <input type="mail" class="text__box" id="mail" placeholder="例)nuage@example.com" required>
+                </li>
+                <li class="form__item">
+                    <div class="form__itemTitle">
+                        <label for="tal">電話番号</label>
+                    </div>
+                    <input type="tal" class="text__box" id="tel">
+                </li>
+                <li class="form__item">
+                    <div class="form__itemTitle">
+                        <label for="detail">ご相談内容</label>
+                        <span class="required">必須</span>
+                    </div>
+                    <textarea class="text__box" cols="30" rows="10" id="detail" required></textarea>
+                </li>
+              </ul>
+              <a class="button">
+                <span type="submit" class="button__border">送信</span>
+              </a>
+            </label>      
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!--//ここまでお問い合わせフォーム-->
+    </section>
+    <!--//ここまでセクション-->
+    </main>
+    
+    <!--ここからフッター-->
+    <footer class="footer"></footer>
+    <!--//ここまでフッター-->
+    <!--jQuery読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="common/js/script.js"></script>
+  </body>
+</html>
