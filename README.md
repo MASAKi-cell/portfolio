@@ -2,6 +2,7 @@
 
 
 ## プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio<br>
+<br>
 ## 担当　　　　　 ：デザイン、コーディング<br>
 <br>
 ## 仕様ソフト/スキル<br>
