@@ -74,6 +74,7 @@ li {
 
 .sect {
   /*各sect(sectiont)タグの設定*/
+  max-width: 1600px;
   padding: 0 4vw;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -250,40 +251,207 @@ li {
   margin-right: 60px;
 }
 
-
 /*==========================================*/
-/*fvの設定
-/*==========================================*/
-
-/*==========================================*/
-/*workの設定
+/*メインアイコンの設定
 /*==========================================*/
 
+.hp_imgInner {
+  max-width: 300px;
+  height: auto;
+  padding: 60px 60px;
+  border: 1px solid #333;
+  box-shadow: 25px 25px 0 #c3a400;
+}
+
 /*==========================================*/
-/*aboutの設定
+/*スクロールアニメーションの設定
+/*==========================================*/
+
+.el_fadeIn {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.el_fadeIn.is_active {
+  transition: 0.8s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/*==========================================*/
+/*my Profileの設定
+/*==========================================*/
+.sect_about{
+  max-width: 1600px;
+  margin: 40px auto;
+}
+
+.hp_icon{
+  width: auto;
+  height: 25px;
+}
+
+.bl_about_txtSkill{
+  color: #d6b32d;
+  padding-top: 10px;
+}
+
+.bl_ttlMain {
+  /*タイトルの設定*/
+  font-size: 18px; /*IE9以前に対応する*/
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d6b32d;
+  letter-spacing: 3px;
+  margin:0 auto;
+  padding-bottom: 10px;
+  max-width: 450px;
+}
+
+.bl_about_wrapper{
+  padding: 20px 40px 60px;
+  background-color: #f2f2f2;
+}
+
+.bl_about_txtInner{
+  letter-spacing: 1.8px;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.bl_about_txtFrist{
+  font-size: 3rem;
+  padding-bottom: 15px;
+}
+
+.bl_about_txtInner{
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  line-height: 3rem;
+  padding-top: 40px;
+}
+
+/*==========================================*/
+/*careerの設定
+/*==========================================*/
+
+/*==========================================*/
+/*skillの設定
+/*==========================================*/
+
+.bl_skill_img{
+  max-width: 200px;
+  height: auto;
+}
+
+.bl_skill_txt{
+  padding-left: 20px;
+}
+
+.bl_skill_txt p{
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  line-height: 3rem;
+}
+
+.bl_skill_txt::first-letter{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d6b32d;
+  padding-bottom: 10px;
+}
+
+
+/*==========================================*/
+/*visionの設定
 /*==========================================*/
 
 /*==========================================*/
 /*contactの設定
 /*==========================================*/
 
+.sect_contact {
+  padding: 70px 0;
+}
+
+.bl_sect_contact {
+  height: 1000px;
+}
+
+.bl_contact_txt {
+  color: #707070;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.bl_contact_tel {
+  font-size: 4.5rem;
+  color: #707070;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 2em;
+  padding-right: 1.38em;
+}
+
+.bl_contact_tel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.93em;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../../icon/tel_icon.png") no-repeat;
+}
+
+.bl_contact_btn {
+  text-align: center;
+}
+
 /*==========================================*/
 /*footerの設定
 /*==========================================*/
+
+.ly-footer {
+  width: 100vw;
+  height: 300px;
+}
+
+.ly_footer_fv {
+  height: 200px;
+  background-image: url("../img/footer_img.jpg");
+  background-repeat: repeat-x;
+  background-size: 300px 300px;
+}
+
+small {
+  font-size: 1.4rem;
+  display: block;
+  text-align: center;
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+  color: #1d293f;
+  letter-spacing: 1.5px;
+}
 
 /*==========================================*/
 /*レスポンスの設定 max-width: 768px;(タブレット)
 /*==========================================*/
 
+/*==
 /*==========================================*/
 /*ハンバーガーメニューの設定
 /*==========================================*/
-.hamburger-btn {
+.js_hamburger_btn {
   display: none;
 }
 
 @media screen and (max-width: 559px) {
-  .hamburger-btn {
+  .js_hamburger_btn {
     display: block;
     position: relative;
     width: 25px;
@@ -291,54 +459,54 @@ li {
     margin-right: 4vw;
     z-index: 20;
   }
+
+  .js_hamburger_btn_parts {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  }
+
+  .hamburger-btn_parts.-top {
+    top: 0;
+  }
+
+  .js_hamburger_btn_parts.-middle {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .js_hamburger_btn_parts.-bottom {
+    bottom: 0;
+  }
+
+  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-top {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-middle {
+    opacity: 0;
+  }
+
+  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-bottom {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+    transform: translateY(-4px) rotate(45deg);
+  }
 }
 
-.hamburger-btn__parts {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-}
-
-.hamburger-btn__parts.-top {
-  top: 0;
-}
-
-.hamburger-btn__parts.-middle {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.hamburger-btn__parts.-bottom {
-  bottom: 0;
-}
-
-.hamburger-btn.active .hamburger-btn__parts.-top {
-  -webkit-transform: translateY(10px) rotate(-45deg);
-  transform: translateY(10px) rotate(-45deg);
-}
-
-.hamburger-btn.active .hamburger-btn__parts.-middle {
-  opacity: 0;
-}
-
-.hamburger-btn.active .hamburger-btn__parts.-bottom {
-  -webkit-transform: translateY(-4px) rotate(45deg);
-  transform: translateY(-4px) rotate(45deg);
-}
-
-.hamburger {
+.js_hamburger {
   display: none;
 }
 
 @media screen and (max-width: 559px) {
-  .hamburger {
+  .js_hamburger {
     display: block;
     position: fixed;
     z-index: 10;
@@ -352,7 +520,7 @@ li {
     transition: all 0.3s;
     background-color: #333333;
   }
-  .hamburger__lists {
+  .js_hamburger_lists {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -369,23 +537,22 @@ li {
     width: 100vw;
     height: 100vh;
   }
-  .hamburger__list {
-    font-size: 16px;
-    /*IE9以前に対応する*/
+  .js_hamburger_list {
+    font-size: 16px; /*IE9以前に対応する*/
     font-size: 1rem;
     list-style: none;
     text-align: center;
   }
-  .hamburger__list + .hamburger__list {
+  .js_hamburger_list + .js_hamburger_list {
     padding-top: 50px;
   }
-  .hamburger__link {
+  .js_hamburger_link {
     text-decoration: none;
     color: #ffffff;
   }
 }
 
-.hamburger.active {
+.js_hamburger.is_active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
