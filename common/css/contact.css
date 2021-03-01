@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/* CSS Document */
+/*==========================================*/
+/*ベースの設定
+/*==========================================*/
+html {
+  font-size: 62.5%;
+}
+
+**,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px; /*IE9以前に対応する*/
+  font-size: 1.6rem;
+  letter-spacing: 0.8em;
+  color: #707070;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom; /*余計な余白の削除*/
+}
+
+.section__title {
+  padding-bottom: 20px;
+}
+
+.section__titleMain {
+  /*タイトルの設定*/
+  font-size: 18px; /*IE9以前に対応する*/
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section__titleSub {
+  /*サブタイトルの設定*/
+  font-size: 16px; /*IE9以前に対応する*/
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.flex__box {
+  /*要素を横並びに設定するコード*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  /*各aタグの設定*/
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  /*各liタグｓの設定*/
+  list-style: none;
+}
+
+.section {
+  /*各sectiontタグの設定*/
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.section__inner {
+  margin: 0 auto;
+}
+
+/*==========================================*/
+/*ボタンの設定
+/*==========================================*/
+.button__border {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #878787;
+  display: block;
+  max-width: 400px;
+  padding: 1.2em 1.5em;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.button__border::after {
+  content: "";
+  border: 4px solid transparent;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+}
+
+.button__border:hover {
+  background-color: #555;
+  color: #f7f7f7;
+}
+
+/*==========================================*/
+/*headerの設定
+/*==========================================*/
+
+@media screen and (max-width: 559px) {
+  .header {
+    background-color: rgba(51, 51, 51, 0.7);
+  }
+}
+
+.header__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2% 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 559px) {
+  .nav {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: inline-block;
+  margin-right: 1vw;
+}
+
+/*==========================================*/
+/*nav-listの設定
+/*==========================================*/
+.nav-list-bottom {
+  /*iconのコーディング*/
+  width: 100vw;
+  height: 300px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.nav-item-bottom {
+  width: 100vw;
+  background-color: #f2f2f2;
+  border: 1px solid #1d293f;
+  color: #1d293f;
+}
+
+.img-1 {
+  /*ホバ―エフェクトの処理*/
+  position: absolute;
+}
+.img-2 {
+  /*ホバ―エフェクトの処理(マウスオーバー時は非表示)*/
+  opacity: 0;
+}
+
+.nav-text {
+  padding-top: 30px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #1d293f;
+}
+
+.nav-text-eng {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #1d293f;
+}
+
+.nav-item-bottom img {
+  width: 250px;
+  height: 250px;
+}
+
+/*==========================================*/
+/*contactの設定
+/*==========================================*/
+
+.contact-inner {
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/*==========================================*/
+/*footerの設定
+/*==========================================*/
+
+/*==========================================*/
+/*レスポンスの設定 max-width: 768px;(タブレット)
+/*==========================================*
+
+/*==========================================*/
+/*ハンバーガーメニューの設定
+/*==========================================*/
+.hamburger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 559px) {
+  .hamburger-btn {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 16px;
+    margin-right: 4vw;
+    z-index: 20;
+  }
+}
+
+.hamburger-btn__parts {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.hamburger-btn__parts.-top {
+  top: 0;
+}
+
+.hamburger-btn__parts.-middle {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hamburger-btn__parts.-bottom {
+  bottom: 0;
+}
+
+.hamburger-btn.active .hamburger-btn__parts.-top {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.hamburger-btn.active .hamburger-btn__parts.-middle {
+  opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-btn__parts.-bottom {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 559px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #333333;
+  }
+  .hamburger__lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .hamburger__list {
+    font-size: 16px;
+    /*IE9以前に対応する*/
+    font-size: 1rem;
+    list-style: none;
+    text-align: center;
+  }
+  .hamburger__list + .hamburger__list {
+    padding-top: 50px;
+  }
+  .hamburger__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.hamburger.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/*# sourceMappingURL=style.css.map */
