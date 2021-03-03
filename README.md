@@ -1,14 +1,13 @@
 # 転職活動用のポートフォリオサイト
 
 
-### プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio ###
+### ■プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio ###
 <br>
-
-### 担当　　　　　 ：デザイン、コーディング ###
-
+### ■担当　　　　　 ：デザイン、コーディング ###
 <br>
-##　仕様ソフト/スキル<br>
-HTML、CSS、Javascript、jQuery、WordPress、illustratar、Xd、VScode、GitHub<br>
+###　■使用スキル：HTML、CSS、Javascript、jQuery、WordPress
+
+illustratar、Xd、VScode、GitHub<br>
 <br>
 ##　このポートフォリオを作成した背景<br>
 ・転職活動をするために、自分自身が今まで学んできた事や作成した作品集をまとめたポートフォリオサイトを作成。<br>
