@@ -3,9 +3,9 @@
 
 ##　プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio<br>
 <br>
-```
-## 担当　　　　　 ：デザイン、コーディング<br>
-```
+
+## 担当　　　　　 ：デザイン、コーディング ##
+
 <br>
 ##　仕様ソフト/スキル<br>
 HTML、CSS、Javascript、jQuery、WordPress、illustratar、Xd、VScode、GitHub<br>
