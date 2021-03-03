@@ -1,7 +1,7 @@
 # 転職活動用のポートフォリオサイト
 
 
-###　プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio ###
+### プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio ###
 <br>
 
 ### 担当　　　　　 ：デザイン、コーディング ###
