@@ -5,7 +5,7 @@
 <br>
 ■ 担当　　　　　 ：デザイン、コーディング
 <br>
-■ 使用スキル：HTML、CSS、Javascript、jQuery、WordPress
+■ 使用スキル：HTML、CSS、Javascript、jQuery、WordPress<br>
 ■ 使用ソフト：illustratar、Xd、VScode、GitHub<br>
 ■ CSS設計　：イレギュラーな要件があった際に対応しやすく、柔軟性のあるPRECSSを採用
 <br>
