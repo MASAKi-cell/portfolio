@@ -8,10 +8,14 @@
 ● 使用スキル：HTML、CSS、Javascript、jQuery、WordPress<br>
 ● 使用ソフト：illustratar、Xd、VScode、GitHub<br>
 ● CSS設計　 ：イレギュラーな要件があった際に対応しやすく、柔軟性のあるPRECSSを採用
+● 
 <br>
 ● フォント：フォントは存在感のある を採用しました。
 <br>
 
+## 成果物 ##
+サイトURL：MASAKI Portfolio
+<br>
 ## このポートフォリオを作成した背景 ##
 
 ・転職活動をするために、自分自身が今まで学んできた事や作成した作品集をまとめたポートフォリオサイトを作成。<br>
