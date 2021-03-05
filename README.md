@@ -3,12 +3,12 @@
 
 ### プロジェクト名：ポートフォリオサイト　TAKAHASHI MASAKI　Portfolio ###
 <br>
-● 担当 ：デザイン、コーディング
+●&nbsp;担当 ：デザイン、コーディング
 <br>
-● 使用スキル：HTML、CSS、Javascript、jQuery、WordPress<br>
-● 使用ソフト：illustratar、Xd、VScode、GitHub<br>
+●&nbsp;使用スキル：HTML/CSS、JavaScript、jQuery、WordPress<br>
+● 使用ソフト：illustratar、Xd、VScode<br>
 ● CSS設計　 ：イレギュラーな要件があった際に対応しやすく、柔軟性のあるPRECSSを採用
-● 
+● ソースコード管理：GitHub
 <br>
 ● フォント：フォントは存在感のある を採用しました。
 <br>
