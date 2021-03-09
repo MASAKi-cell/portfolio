@@ -20,7 +20,8 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.8em;
   color: #707070;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Work Sans", sans-serif, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
 img {
@@ -62,7 +63,7 @@ img {
 a {
   /*各aタグの設定*/
   text-decoration: none;
-  color: block;
+  color: #333;
   display: inline-block;
 }
 
@@ -74,7 +75,7 @@ li {
 .sect {
   /*各sect(sectiont)タグの設定*/
   padding: 0 4vw;
-  margin-top: 60px;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
@@ -82,7 +83,7 @@ li {
   margin: 0 auto;
 }
 
-.sect_ttl{
+.sect_ttl {
   padding-bottom: 80px;
 }
 
@@ -124,29 +125,32 @@ li {
   color: #f7f7f7;
 }
 
-.el_btn_hp{ /*ボタンを中央配置(work部)*/
+.el_btn_hp {
+  /*ボタンを中央配置(work部)*/
   display: block;
   margin: 60px auto 0;
   max-width: 300px;
   transform: translateX(-10%); /*位置を若干修正*/
 }
 
-.el_btnWork{ /*ボタンの変更(work部)*/
-  margin-top: 20px;
+.el_btnWork {
+  /*ボタンの変更(work部)*/
+  margin-top: 30px;
 }
 
-.el_btn_borderWork{ /*ボタンの変更(work部)*/
+.el_btn_borderWork {
+  /*ボタンの変更(work部)*/
   width: 300px;
+  height: 50px;
   font-size: 1.5rem;
 }
-
 
 /*==========================================*/
 /*headerの設定(スティッキーヘッダー)
 /*==========================================*/
 
 .ly_header {
-    width: 100vw;
+  width: 100vw;
 }
 
 .header_inner_flex {
@@ -162,17 +166,24 @@ li {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 30px; /*ロゴ部の左側の余白を設定*/
+  z-index: 1200;
 }
 
-.header_ttl{
+.header_ttl {
   letter-spacing: 2px;
+  z-index: 1200;
+  color: #333;
 }
 
-.js_header_clone { 
+.header_ttl a {
+  z-index: 1200;
+}
+
+.js_header_clone {
   /*header_cloneクラスでスティッキーヘッダーを作成*/
   width: 100%;
   height: 40px;
-  background-color: #fff;
+  background-color: transparent;
   position: fixed;
   top: -100px;
   left: 0;
@@ -187,12 +198,12 @@ li {
 }
 
 .js_header_clone.js_visible {
-    /*visibleクラスの付与*/
+  /*visibleクラスの付与*/
   top: 0;
 }
 
-.js_header_clone .el_navList {  
-    color: #000;
+.js_header_clone .el_navList {
+  color: #000;
 }
 
 /*==========================================*/
@@ -203,60 +214,112 @@ li {
   margin-left: auto;
 }
 
-@media screen and (max-width: 559px) {
-  .el_nav {
-    display: none;
-  }
-}
-
 .el_navList {
   position: relative;
   margin-right: 1.5vw;
   padding-top: 5px;
   font-size: 1.8rem;
+  color: #333;
   letter-spacing: 2px;
-  transition: .5s;
+  transition: 0.5s;
+  z-index: 120;
 }
 
-.el_navList:after{
+.el_navList a {
+  color: #333;
+  opacity: 0.8;
+}
+
+.el_navList a:hover {
+  color: #000;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* デザイン変更の為、一旦削除
+.el_navList:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 0;
-  /*border-bottom: solid 1px #d6b32d;*/
-  border-bottom-color: hsla(48,68%,51%,0.5); /* 半透明指定*/
-  border-bottom-style: solid;
-  /*background: linear-gradient(transparent 70%, #d6b32d 50%); */
-  transition: .5s;
+  opacity: 0.8;
+  color: #000;
+  background: linear-gradient(transparent 70%, #d6b32d 50%); 
+  transition: 0.5s;
 }
 
-.el_navList:hover:after{
+.el_navList:hover:after {
   width: 100%;
+  color: #000;
+  opacity: 1;
 }
 
-.el_navListTwitter:hover:after{
+.el_navListTwitter:hover:after {
   width: 0%;
 }
 
-.el_navListGithub:hover:after{
+.el_navListGithub:hover:after {
   width: 0%;
-}
+} */
 
-.el_navList:last-child{
+.el_navList:last-child {
   margin-right: 60px;
 }
 
 /*==========================================*/
 /*fvの設定
 /*==========================================*/
+body {
+  position: relative;
+}
+
+.fv img {
+  /*ファーストビューの設定*/
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hp_glass_container {
+  /*グラスモーフィズムのコーディング*/
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* デザイン変更の為、一旦削除
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 20px;
+  backdrop-filter: blur(11px);
+  background-color: rgba(255,255,255, 0.208);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 0px rgba(255,255,255,0.4) solid;
+  border-bottom: 0px rgba(40,40,40,0.35) solid;
+  border-right: 0px rgba(40,40,40,0.35) solid;
+  z-index: -10;
+  */
+}
 
 /*==========================================*/
 /*sect_fristの設定
 /*==========================================*/
 
-.sect_frist{
-  height: 800px;
+.sect_frist {
+  height: 600px;
 }
 
 /*==========================================*/
@@ -331,6 +394,10 @@ li {
   }
 }
 
+.el_passing_bar {
+  z-index: 130;
+}
+
 .js_passing .el_passing_box {
   display: block;
   text-align: left;
@@ -363,13 +430,13 @@ li {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-    /* .el_passing_txtの見た目設定 */
+  /* .el_passing_txtの見た目設定 */
   font-size: 7rem;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   font-weight: bold;
 }
 
-.js_passing .el_passing_txt2{
+.js_passing .el_passing_txt2 {
   /* .el_passing_txtの見た目設定 */
   font-size: 3rem;
   letter-spacing: 0.1;
@@ -389,28 +456,32 @@ li {
   animation: el_passing_txt 0s ease 1s 1 normal forwards;
 }
 
-.js_passing.js_move .el_passing_txt::before{ /*二色のボーダーラインの設定*/
-  content: '';
+.js_passing.js_move .el_passing_txt::before {
+  /*二色のボーダーラインの設定*/
+  content: "";
   position: absolute; /*左下に位置する*/
   bottom: 0;
   left: 0;
-  width: 800px; /*オレンジラインの横サイズを決める*/
+  width: 710px; /*オレンジラインの横サイズを決める*/
   height: 5px;
   background-color: #333;
 }
 
-.js_passing.js_move .el_passing_txt::after{
-  content: '';
+.js_passing.js_move .el_passing_txt::after {
+  content: "";
   position: absolute;
   bottom: 0;
-  left: 800px; /*黒色ラインの位置をずらす*/
-  width: calc(100% - 800px); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+  left: 710px; /*黒色ラインの位置をずらす*/
+  width: calc(
+    100% - 710px
+  ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
   height: 5px;
-  background-color: #D6B32D;
+  background-color: #d6b32d;
 }
 
-.js_passing.js_move .el_passing_txt2::before{ /*二色のボーダーラインの設定*/
-  content: '';
+.js_passing.js_move .el_passing_txt2::before {
+  /*二色のボーダーラインの設定*/
+  content: "";
   position: absolute; /*左下に位置する*/
   top: 0;
   left: 0;
@@ -418,26 +489,26 @@ li {
   background-color: #333;
 }
 
-.js_passing.js_move .el_passing_txt2::after{
-  content: '';
+.js_passing.js_move .el_passing_txt2::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 200px; /*黒色ラインの位置をずらす*/
-  width: calc(40% - 200px); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+  width: calc(
+    40% - 200px
+  ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
   height: 5px;
   background-color: #333;
 }
 
-
-
-.hp_accent{
+.hp_accent {
   /*アクセントカラーの設定*/
-  color: #D6B32D;
+  color: #d6b32d;
   font-size: 20px; /*IE9以前に対応する*/
   font-size: 3rem;
 }
 
-.frist_inner{
+.frist_inner {
   /*メインテキストの位置を設定*/
   position: absolute;
   top: 200px;
@@ -448,22 +519,23 @@ li {
 /*Scroll Downの設定
 /*==========================================*/
 
-.el_scroll{
+.el_scroll {
   position: absolute; /*Scroll Downの位置調整*/
-  bottom: -190px;
-  right: -150px;
+  bottom: -150px;
+  right: -120px;
+  z-index: 110;
   letter-spacing: 4px;
   color: #333;
   writing-mode: vertical-rl; /* 日本語の向きを縦にする */
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
 }
 
-.el_scroll_btn{
+.el_scroll_btn {
   padding-top: 80px;
 }
 
-.el_scroll_btn span{
+.el_scroll_btn span {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -480,20 +552,23 @@ li {
 
 .el_scroll_btn span:nth-of-type(1) {
   bottom: -15px;
+  right: 2.5px; /*矢印の位置を調整*/
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
 
 .el_scroll_btn span:nth-of-type(2) {
   bottom: -25px;
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
+  right: 2.5px; /*矢印の位置を調整*/
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .el_scroll_btn span:nth-of-type(3) {
   bottom: -35px;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
+  right: 2.5px; /*矢印の位置を調整*/
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 @-webkit-keyframes sdb {
@@ -520,15 +595,30 @@ li {
 }
 
 /*==========================================*/
+/*スクロールアニメーションの設定
+/*==========================================*/
+
+.el_fadeIn {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.el_fadeIn.is_active {
+  transition: 0.8s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*==========================================*/
 /*workの設定
 /*==========================================*/
 
 .sect_work {
-  height: 2200px;
+  height: 1420px;
   max-width: 1800px;
 }
 
-.bl_work_inner{
+.bl_work_inner {
   position: relative;
 }
 
@@ -537,7 +627,7 @@ li {
   flex-direction: row-reverse;
 }
 
-.bl_work_inner{
+.bl_work_inner {
   margin-bottom: 100px;
 }
 
@@ -548,7 +638,7 @@ li {
   line-height: 1.5;
   position: absolute;
   top: 115px;
-	left: 10px;
+  left: 10px;
   width: 40vw;
   height: 500px;
 }
@@ -560,94 +650,101 @@ li {
   line-height: 1.5;
   position: absolute;
   top: 115px;
-	right: -310px;
+  right: -60px;
   width: 40vw;
   height: 500px;
 }
 
-.bl_work_number{
+.bl_work_number {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 10rem;
-  color: #D6B32D;
-  letter-spacing: 0.2px;
+  color: #d6b32d;
+  letter-spacing: 0.15px;
 }
 
-.bl_work_number2{
+.bl_work_number2 {
   position: absolute;
   top: 0;
   right: 80px;
   font-size: 10rem;
-  color: #D6B32D;
-  letter-spacing: 0.2px;
- }
+  color: #d6b32d;
+  letter-spacing: 0.15px;
+}
 
- .bl_work_number span{
+.bl_work_number span {
   color: #333;
   font-size: 6rem;
   letter-spacing: 2.5px;
   padding-left: 5px;
 }
 
-.bl_work_number2 span{
+.bl_work_number2 span {
   color: #333;
   font-size: 6rem;
   letter-spacing: 2.5px;
   padding-left: 5px;
+  z-index: 100;
 }
 
-.bl_work_number::before{ /*二色のボーダーラインの設定*/
-  content: '';
+.bl_work_number::before {
+  /*二色のボーダーラインの設定*/
+  content: "";
   position: absolute; /*左下に位置する*/
   bottom: 5px;
   left: 2px;
-  width: 130px; /*オレンジラインの横サイズを決める*/
+  width: 110px; /*オレンジラインの横サイズを決める*/
   height: 5px;
-  background-color: #D6B32D;
+  background-color: #d6b32d;
 }
 
-.bl_work_number::after{
-  content: '';
+.bl_work_number::after {
+  content: "";
   position: absolute;
   bottom: 5px;
-  left: 130px; /*黒色ラインの位置をずらす*/
-  width: calc(450px - 130px); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+  left: 110px; /*黒色ラインの位置をずらす*/
+  width: calc(
+    450px - 110px
+  ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
   height: 5px;
   background-color: #333;
 }
 
-.bl_work_number2::before{ /*二色のボーダーラインの設定*/
-  content: '';
+.bl_work_number2::before {
+  /*二色のボーダーラインの設定*/
+  content: "";
   position: absolute; /*左下に位置する*/
   bottom: 5px;
   left: 2px;
-  width: 130px; /*オレンジラインの横サイズを決める*/
+  width: 120px; /*オレンジラインの横サイズを決める*/
   height: 5px;
-  background-color: #D6B32D;
+  background-color: #d6b32d;
 }
 
-.bl_work_number2::after{
-  content: '';
+.bl_work_number2::after {
+  content: "";
   position: absolute;
   bottom: 5px;
-  left: 130px; /*黒色ラインの位置をずらす*/
-  width: calc(450px - 130px); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+  left: 120px; /*黒色ラインの位置をずらす*/
+  width: calc(
+    450px - 120px
+  ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
   height: 5px;
   background-color: #333;
 }
 
-.bl_work_img{
-  width: 65vw;
-	height: 650px;
-	background-image: url("../img/yashima/yahata__web.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+.bl_work_img {
+  width: 50vw;
+  height: 350px;
+  background-image: url("../img/yashima/yahata__web.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.bl_work_img2{
-	background-image: url("../img/tenkue/tenkue_top.jpg");
+.bl_work_img2 {
+  background-image: url("../img/tenkue/tenkue_top.jpg");
 }
 
 /*==========================================*/
@@ -672,16 +769,15 @@ li {
   color: #333;
 }
 
-
 .slick-slide {
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
   opacity: 1;
 }
 
-.slider_txt{
-  font-size: 2rem;
-  color: #D6B32D;
-  letter-spacing: 1.6px;
+.slider_txt {
+  font-size: 1.8rem;
+  color: #d6b32d;
+  letter-spacing: 0.8px;
   text-align: center;
   padding-top: 10px;
 }
@@ -692,20 +788,20 @@ li {
 
 .slick-arrow {
   position: absolute;
-  top: 0;
+  top: -20px;
   bottom: 0;
   width: 28px;
   height: 28px;
   margin: auto;
 }
 .prev-arrow {
-  left: 10px;
-  opacity: .8;
+  left: -15px;
+  opacity: 1;
   z-index: 10;
 }
 .next-arrow {
-  right: 10px;
-  opacity: .8;
+  right: -15px;
+  opacity: 1;
 }
 
 /*==========================================*/
@@ -721,30 +817,31 @@ li {
   margin: 0 auto;
 }
 
-.bl_about_txtInner{
+.bl_about_txtInner {
   max-width: 420px;
   padding: 60px 90px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
-.bl_about_txtFrist{
+.bl_about_txtFrist {
   font-size: 2rem;
   color: #333;
   padding-bottom: 20px;
   letter-spacing: 2px;
 }
 
-.bl_about_txtFrist ~ p{
+.bl_about_txtFrist ~ p {
   font-size: 2rem;
   color: #333;
   margin-top: 10px;
   letter-spacing: 1.5px;
 }
 
-.el_about_btn{ /*ボタンのコーディング*/
-    display: block;
-    margin-top: 50px;
-    max-width: 300px;
+.el_about_btn {
+  /*ボタンのコーディング*/
+  display: block;
+  margin-top: 50px;
+  max-width: 300px;
 }
 
 /*==========================================*/
@@ -756,16 +853,16 @@ li {
   height: auto;
   padding: 60px 60px;
   border: 1px solid #333;
-  box-shadow: 25px 25px 0 #c3a400;
+  box-shadow: 25px 25px 0 #d6b32d;
 }
 
 /*==========================================*/
 /*contactの設定
 /*==========================================*/
 
-.sect_contact{
+.sect_contact {
   padding: 70px 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .bl_sect_contact {
@@ -788,11 +885,11 @@ li {
   padding-right: 1.38em;
 }
 
-.bl_contact_tel::before{
-  content: '';
+.bl_contact_tel::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: .93em;
+  top: 55%;
+  left: 0.93em;
   transform: translateY(-50%);
   display: inline-block;
   width: 40px;
@@ -832,120 +929,250 @@ small {
 }
 
 /*==========================================*/
-/*レスポンスの設定 max-width: 768px;(タブレット)
+/*レスポンスの設定 min-width: 736px;
 /*==========================================*/
 
+@media screen and (min-width: 736px) {
+  .el_btn_navItem {
+    /*736px以上はハンバーガーメニュー非表示*/
+    display: none;
+  }
+
+  .el_burger_btn {
+    /*736px以上はハンバーガーメニュー非表示*/
+    display: none;
+  }
+}
+
+/*==========================================*/
+/*レスポンスの設定 max-width: 736px;(iPhone6,7,8Plus 横向き)
+/*==========================================*/
+@media screen and (max-width: 736px) {
 /*==========================================*/
 /*ハンバーガーメニューの設定
 /*==========================================*/
-.js_hamburger_btn {
-  display: none;
-}
-
-@media screen and (max-width: 559px) {
-  .js_hamburger_btn {
-    display: block;
-    position: relative;
-    width: 25px;
-    height: 16px;
-    margin-right: 4vw;
-    z-index: 20;
+  .header_inner_flex {
+    display: none;
   }
 
-  .js_hamburger_btn_parts {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #ffffff;
-    position: absolute;
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-  }
-
-  .hamburger-btn_parts.-top {
-    top: 0;
-  }
-
-  .js_hamburger_btn_parts.-middle {
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-
-  .js_hamburger_btn_parts.-bottom {
-    bottom: 0;
-  }
-
-  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-top {
-    -webkit-transform: translateY(10px) rotate(-45deg);
-    transform: translateY(10px) rotate(-45deg);
-  }
-
-  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-middle {
-    opacity: 0;
-  }
-
-  .js_hamburger_btn.is_active .js_hamburger_btn_parts.-bottom {
-    -webkit-transform: translateY(-4px) rotate(45deg);
-    transform: translateY(-4px) rotate(45deg);
-  }
-}
-
-.js_hamburger {
-  display: none;
-}
-
-@media screen and (max-width: 559px) {
-  .js_hamburger {
+  .el_btn_navItem {
+    /*ハンバーガーメニュー*/
     display: block;
     position: fixed;
-    z-index: 10;
     top: 0;
     right: 0;
-    width: 100vw;
     height: 100vh;
-    -webkit-transform: translateX(100vw);
-    transform: translateX(100vw);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    background-color: #333333;
-  }
-  .js_hamburger_lists {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
-  }
-  .js_hamburger_list {
-    font-size: 16px; /*IE9以前に対応する*/
-    font-size: 1rem;
-    list-style: none;
     text-align: center;
+    padding: 50px 0 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    z-index: 200;
+    transform: translateX(-100%); /*初期設定で画面の外側に配置*/
+    opacity: 0; /*初期設定で非表示*/
+    transition: transform 0.3s, opacity 0.3s;
   }
-  .js_hamburger_list + .js_hamburger_list {
-    padding-top: 50px;
-  }
-  .js_hamburger_link {
-    text-decoration: none;
-    color: #ffffff;
-  }
-}
 
-.js_hamburger.is_active {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  .el_btn_text {
+    /*ハンバーガーメニューの表示、要素の間隔を設定*/
+    margin: 0 auto 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    padding-bottom: 20px;
+    width: 170px;
+  }
+
+  .el_btn_text:first-of-type {
+    margin-top: 20px;
+  }
+
+  .el_btn_text:last-of-type {
+    /*最後の要素はmarign-bottom: 0px;*/
+    margin-bottom: 0;
+  }
+
+  .el_btn_text a {
+    /*色の設定*/
+    color: #d6b32d;
+  }
+
+  .el_btn_text1 a::before {
+    content: "Home";
+    font-size: 2em;
+    display: block;
+  }
+
+  .el_btn_text2 a::before {
+    content: "Blog";
+    font-size: 2em;
+    display: block;
+  }
+
+  .el_btn_text3 a::before {
+    content: "Work";
+    font-size: 2em;
+    display: block;
+  }
+
+  .el_btn_text4 a::before {
+    content: "About";
+    font-size: 2em;
+    display: block;
+  }
+
+  .el_btn_text5 a::before {
+    content: "Contact";
+    font-size: 2em;
+    display: block;
+  }
+
+  .el_btn_text a:hover {
+    color: #f8e725;
+  }
+
+  .el_burger_btn {
+    /*ハンバーガーメニューの設定*/
+    display: flex; /*横並び*/
+    align-items: center;
+    position: fixed; /*配置位置の調整*/
+    top: 10px;
+    right: 5vw;
+    z-index: 300;
+    cursor: pointer;
+  }
+
+  .el_bar {
+    display: block;
+    background-color: #d6b32d;
+    height: 2px;
+    width: 25px;
+    border-radius: 1px; /*角丸に設定*/
+  }
+
+  .el_bar_top {
+    transform: translateY(-4px); /*4px上に設定*/
+    transition: transform 0.3s;
+  }
+
+  .el_bar_bottom {
+    transform: translateY(4px); /*4px下に設定*/
+    transition: transform 0.3s;
+  }
+
+  .el_burger_menu {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #d6b32d;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-left: 5px;
+  }
+
+  .js_cross.el_bar_top {
+    /*クリックした時のハンバーガーメニュー×印表示*/
+    transform: translateY(2px) rotate(315deg);
+    transition: transform 1s ease-out;
+  }
+
+  .js_cross.el_bar_mid {
+    /*真ん中の線は非表示*/
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+
+  .js_cross.el_bar_bottom {
+    /*下部の線を傾ける*/
+    transform: translateY(-2px) rotate(-315deg);
+    transition: transform 1s ease-out;
+  }
+
+  .js_open {
+    /*クリックした時のハンバーガーメニューの表示*/
+    transform: translateX(0); /*初期設定で画面の外側に配置 ➝ 表示*/
+    opacity: 1; /*opacity: 1;で非表示だったのを表示する*/
+    transition: transform 0.5s, opacity 0.5s;
+  }
+
+  .el_burger_musk {
+    /*クリックした時の背景表示*/
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /*背景が暗くなる*/
+    z-index: 100;
+  }
+
+  .el_burger_btn.black.el_bar {
+    /*スクロールでハンバーガーメニューの色を変更する*/
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  .js_black.el_burger_menu {
+    /*スクロールでmenuの色を変更する*/
+    color: #fff;
+    transition: color 0.3s;
+  }
+
+  body.js_noscroll {
+    /*ハンバーガーメニューが開いたときにスクロールしなくなる*/
+    overflow: hidden;
+  }
+/*==========================================*/
+/*sect_fristの設定
+/*==========================================*/
+
+/*==========================================*/
+/*左から右に現れて文字だけ残るCSSアニメーションの設定を行う
+/*==========================================*/
+
+  .js_passing .el_passing_txt {
+    /* フォントサイズの変更 */
+    font-size: 3.5rem;
+    letter-spacing: 0.6px;
+  }
+
+  .js_passing .el_passing_txt2 {
+    /* フォントサイズの変更 */
+    font-size: 1.5rem;
+  }
+
+  .js_passing.js_move .el_passing_txt::before {
+    bottom: -7px; /*ボーダーラインの位置を調整*/
+    width: 360px; /*オレンジラインの横サイズを決める*/
+    height: 4px;
+  }
+
+  .js_passing.js_move .el_passing_txt::after {
+    bottom: -7px; /*ボーダーラインの位置を調整*/
+    left: 360px; /*黒色ラインの位置をずらす*/
+    width: calc(
+      100% - 360px
+    ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+    height: 4px;
+  }
+  
+  .js_passing.js_move .el_passing_txt2::before {
+    top: 7px; /*ボーダーラインの位置を調整*/
+    width: 200px; /*オレンジラインの横サイズを決める*/
+    height: 4px;
+  }
+  
+  .js_passing.js_move .el_passing_txt2::after {
+    top: 7px; /*ボーダーラインの位置を調整*/
+    left: 100px; /*黒色ラインの位置をずらす*/
+    width: calc(
+      40% - 100px
+    ); /*calcで黒ラインの横幅を自動計算、レスポンシブに対応*/
+    height: 4px;
+
+  /*==========================================*/
+  /*Scroll Downの設定
+  /*==========================================*/
+  
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,35 +1,38 @@
 /*javascript*/
 
-$(function () {
- 
-  /*
-  /* ハンバーガーメニュー
+$(function(){
+
+	/*
+   *ハンバーガーメニューの作成
    */
-
-  $(".hamburger-btn").click(function () {
-    $(this).toggleClass("active");
-
-    if ($(this).hasClass("active")) {
-      $(".hamburger").addClass("active");
-    } else {
-      $(".hamburger").removeClass("active");
-    }
-  });
-  $(".hamburger__list").click(function () {
-    $(".hamburger,.hamburger-btn").removeClass("active");
-  });
-
-  //ヘッダー固定(SP)
-  //fvを超えたらスクロールでheaderに色を付ける
-  var mainPos = $(".fv").height();
-
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > mainPos) {
-      $(".header__inner").addClass("addColor");
-    } else {
-      $(".header__inner").removeClass("addColor");
-    }
-  });
+	
+		var bgHeight = $('.sect_frist').outerHeight(); //ファーストビュー(.f.sect_frist)の高さを取得
+	
+		$('.el_burger_btn').on('click',function(){
+			if($(window).scrollTop() < bgHeight - 50){ //ハンバーガーボタンが.sect_fristより上にある場合
+				$('.el_bar').toggleClass('js_cross'); //ハンバーガーメニューのラインをクロスさせるCSSを割り当てる
+				$('.el_btn_navItem').toggleClass('js_open'); //ナビゲーションが開くCSSを割り当てる
+				$('.el_burger_musk').fadeToggle(300); //背景を暗くするマスクを付与
+				$('body').toggleClass('js_noscroll'); //ハンバーガーメニューを開いたとき、スクロールを禁止する
+				
+			}else{ //ハンバーガーボタンが.sect_fristより下にある場合
+				
+				$(this).toggleClass('js_blcok'); //ハンバーガーボタンのcolorを変更、それ以外は同様の処理を実施
+				$('.el_bar').toggleClass('js_cross'); 
+				$('.el_btn-navItem').toggleClass('js_open');
+				$('.el_burger_musk').fadeToggle(300);
+				$('body').toggleCLass('js_noscroll');	
+			}
+		});
+				
+		$(window).on('load scroll', function(){ //スクロールでサイトロゴとハンバーガーメニューの色を変更
+				if( $(window).scrollTop() < bgHeight - 50){
+					$('.logo-inner').removeClass('js_black'); //logoのクラスを外す処理
+					$('.logo-inner').addClass('js_black'); //logoのクラスを加える処理			
+					$('.el_burger_btn').removeClass('js_black'); //burger-btnのクラスを外す処理
+					$('.el_burger_btn').addClass('js_black'); //burger-btnのクラスを加える処理
+				}
+			});
 });
 
 $(function () {
@@ -76,10 +79,42 @@ $(window).scroll(function () {
   var scroll = $(window).scrollTop(); //scrollTop()でブラウザ画面をスクロールした時の位置(スクロール量)を取得
   var windowHeight = $(window).height(); //windowの高さを取得
   if (scroll > imgPos - windowHeight + windowHeight / 4) {
-    $(this).addClass("js_move");　//js_moveクラスを付与
+    $(this).addClass("js_move"); //js_moveクラスを付与
   }
 });
 });
+
+
+
+$(function () {
+
+    /*
+     * スクロールアニメーション処理
+     */
+  
+      // aimation呼び出し
+      if ($('.js_scroll_trigger').length) {
+          scrollAnimation();
+    }
+      // aimation関数
+      function scrollAnimation() {
+          $(window).scroll(function () {
+              $(".js_scroll_trigger").each(function () {
+                  let position = $(this).offset().top,
+                      scroll = $(window).scrollTop(),
+                      windowHeight = $(window).height();
+  
+                  if (scroll > position - windowHeight + 200) {
+            $(this).addClass('is_active');
+            /*「トリガーが画面下部200pxに達したか」を判定するために必要な情報を変数に格納。
+             * 200pxに以下に到達するとis_activeクラスを付与する。
+             */
+                  }
+              });
+          });
+      }
+    $(window).trigger('scroll');
+  });
 
 
 
