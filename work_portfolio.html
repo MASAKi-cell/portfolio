@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: サイトURL#">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAKAHASHI MASAKI Portfolio Site</title>
+  <meta name="description" content="" />
+  <!--PC：１２０文字以内 スマホ：70文字以内-->
+  <!--ここからOGP-->
+  <meta property="og:url" content=" ページの URL" />
+  <meta property="og:type" content=" ページの種類" />
+  <!--website /blog 下層→article-->
+  <meta property="og:title" content=" ページの タイトル" />
+  <meta property="og:description" content=" ページのディスクリプション" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:image" content=" サムネイル画像の URL" />
+  <!--//OGPここまで-->
+
+  <!--CSSのリンク-->
+  <link rel="stylesheet" href="common/css/reset.css" />
+  <link rel="stylesheet" href="common/css/work_portfolio.css" />
+</head>
+
+<body>
+  <!--ここからheaderー-->
+  <header class="ly_header">
+    <div class="header_inner">
+      <div class="header_inner_flex">
+        <div>
+          <h1 class="header_ttl"><a href="#">MASAKi Portfolio</a></h1>
+        </div>
+        <!--ナビゲーション-->
+        <nav class="el_nav">
+          <ul class="el_navLists flex_box">
+            <li class="el_navList"><a href="index.html">トップページ</a></li>
+            <li class="el_navList"><a href="https://www.multispots.net/">ブログ</a></li>
+            <li class="el_navList"><a href="archive.html">制作物</a></li>
+            <li class="el_navList"><a href="about.html">私について</a></li>
+            <li class="el_navList"><a href="contact.html">お問い合わせ</a></li>
+            <li class="el_navList el_navListTwitter"><a href="https://twitter.com/bje351493"><img
+                  src="icon/twitter_icon.png" alt="Twitterのロゴ"></a></li>
+            <li class="el_navList el_navListGithub"><a href="https://github.com/MASAKi-cell"><img
+                  src="icon/Github_icon.png" alt="Githubのロゴ"></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--/.flex_box-->
+      <!--ハンバーガーメニュー-->
+      <ul class="el_btn_navItem" id="js__nav__item">
+        <li class="el_btn_text el_btn_text1"><a href="index.html">ホーム</a></li>
+        <li class="el_btn_text el_btn_text2"><a href="https://www.multispots.net/">ブログ</a></li>
+        <li class="el_btn_text el_btn_text3"><a href="archive.html">制作物</a></li>
+        <li class="el_btn_text el_btn_text4"><a href="about.html">私について</a></li>
+        <li class="el_btn_text el_btn_text5"><a href="contact.html">お問い合わせ</a></li>
+        <li class="el_btn_text el_navListTwitter">
+          <a href="https://twitter.com/bje351493">
+            <img src="icon/twitter_icon_nav.png" alt="Twitterのロゴ"></a>
+          <a href="https://github.com/MASAKi-cell">
+            <img src="icon/github_icon_nav.png" alt="Githubのロゴ">
+          </a>
+        </li>
+      </ul>
+
+      <div class="el_burger_btn">
+        <a class="el_bars">
+          <span class="el_bar el_bar_top"></span>
+          <span class="el_bar el_bar_mid"></span>
+          <span class="el_bar el_bar_bottom"></span>
+        </a>
+        <a class="el_burger_menu">menu</a>
+      </div>
+      <span class="el_burger_musk"></span>
+      <!--/ハンバーガーメニュー-->
+    </div>
+  </header>
+  <!--//ここまでヘッダー-->
+
+  <!--ここからメインコンテンツ-->
+  <main class="main">
+    <section class="sect">
+      <div class="sect_ttl_inner">
+        <p class="sect_subttl">Web Design</p>
+        <h2 class="sect_ttl js_scroll_trigger el_fadeIn">Portfolio Site</h2>
+      </div>
+    </section>
+
+    <!--ここからファーストビュー -->
+    <div class="fv sect_frist">
+      <img src="common/img/portfolio_top.png" alt="ウェブサイトの見本写真">
+    </div>
+    <!--//ここまでファーストビュー -->
+
+    <!--ここからdescript -->
+    <section class="sect">
+      <div class="bl_descript_wrapper">
+        <div class="bl_descript_inner">
+          <table>
+            <tbody>
+              <tr>
+                <th class="bl_descript_list">コーディング</th>
+                <td class="bl_descript_txt">TOPページ、aboutページ、CONTACTページ、workページ</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">使用ソフト&スキル</th>
+                <td class="bl_descript_txt hp_descript_color">HTML/CSS、WordPress、Javascript、jQuery、VScode、XD、illustrator
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table>
+            <tbody>
+              <tr>
+                <th class="bl_descript_list">プロジェクト名</th>
+                <td class="bl_descript_txt bl_descript_txt2">Portfolio Site</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">制作の目的</th>
+                <td class="bl_descript_txt bl_descript_txt2">転職活動用にポートフォリオサイトを作成
+                </td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">CSS設計</th>
+                <td class="bl_descript_txt bl_descript_txt2">PRECSSを採用(イレギュラーな要件でも対応しやすく、柔軟性のある為)
+                </td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">ソースコード管理</th>
+                <td class="bl_descript_txt bl_descript_txt2">GitHub</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">担当範囲</th>
+                <td class="bl_descript_txt bl_descript_txt2">デザイン/コーディング</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">制作期間</th>
+                <td class="bl_descript_txt bl_descript_txt2">2ヶ月</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">レスポンシブ</th>
+                <td class="bl_descript_txt bl_descript_txt2">スマートフォン/PC</td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">ターゲット</th>
+                <td class="bl_descript_txt bl_descript_txt2">採用担当者</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table>
+            <tbody>
+              <tr>
+                <th class="bl_descript_list">サイトURL</th>
+                <td class="bl_descript_txt bl_descript_txt2">
+                  <a href="https://github.com/MASAKi-cell/Nabeshima">https://github.com/MASAKi-cell/Nabeshima</a>
+                </td>
+              </tr>
+              <tr>
+                <th class="bl_descript_list">GitHub</th>
+                <td class="bl_descript_txt bl_descript_txt3">
+                  <a href="https://github.com/MASAKi-cell/portfolio">https://github.com/MASAKi-cell/portfolio</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+    <!--//ここまでdescript -->
+
+    <!--ここからdetail -->
+    <section class="sect bl_detail">
+      <div class="bl_detail_wrapper">
+        <div class="bl_detail_inner flex_box">
+          <div class="bl_detail_img flex_box">
+            <img class="bl_detail_img1" src="common/img/portfolio/portfolio_web.jpeg" alt="写真">
+            <img class="bl_detail_img2" src="common/img/portfolio/portfoli_mobile.jpeg" alt="写真">
+          </div>
+          <div clas="bl_detail_descript">
+            <h2 class="bl_detail_ttl">工夫したところ</h2>
+            <div class="bl_detail_txt">
+              <p>
+                ファーストビューは2021年UIデザインのトレンド、グラスモーフィズムとCSSアニメーションでデザインしました。
+              </p>
+              <p> 見出しやリンクはメインカラーのオレンジ色でまとめて、全体の配色に統一感を演出しました。</p>
+              <p>TOPページには何ができる人なのかが最も知りたい情報であるため、WORKページを上部に配置してます。
+                興味を持ってもらったらABOUTページ、CONTACTページに移動してもらい私がどういう人物であるのかを説明してます。
+              </p>
+            </div>
+            <div class="bl_detail_txt">
+              <img class="bl_detail_sideImg" src="common/img/portfolio/portfolio_slick.png" alt="写真">
+              <p> カルーセルスライダーを使用して、イラスト、アプリ毎にカテゴリーまとめました。
+                WORKページでこれまで作成したサイト、バナー、アプリのデザイン、意図を一つ一つ説明してます。
+              </p>
+            </div>
+            <div class="bl_detail_txt">
+              <img class="bl_detail_sideImg" src="common/img/portfolio/portfolio_about.png" alt="写真">
+              <p> ABOUTページでは私の経歴を記載し、どの様にしてプログラミングを勉強するに至ったかの経緯や
+                過去の経歴、現在、将来どのようなプログラマーになりたいかを記載しました。</p>
+            </div>
+            <div class="bl_detail_txt">
+              <img class="bl_detail_sideImg" src="common/img/portfolio/portfoli_main.png" alt="写真">
+              <p>
+                illustratorとペンタブでアイコンを自作し親しみやすさを表現してます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!--//ここまでdetail -->
+
+    <!--ボタン-->
+    <section>
+      <a href="archive.html" class="el_btn el_btn_hp js_scroll_trigger el_fadeIn">
+        <span type="submit" class="el_btn_border">戻る</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!--ここからfooter-->
+  <footer class="ly_footer js_scroll_trigger el_fadeIn">
+    <div class="ly_footer_fv">
+    </div>
+    <small>&copy;2021 TAKAHASHI MASAKI</small>
+  </footer>
+  <!--//ここまでfooter-->
+
+  <!--jQuery読み込み-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common/js/script.js"></script>
+
+  <!-- slickスライダー用のjavaScript -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="common/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
