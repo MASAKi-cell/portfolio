@@ -8,7 +8,7 @@ Ver1.01
 ●&nbsp;担当 ：デザイン、コーディング<br>
 ●&nbsp;使用スキル：HTML/CSS、JavaScript、jQuery、WordPress<br>
 ●&nbsp;使用ソフト：illustratar、Xd、VScode<br>
-●&nbsp;CSS設計　 ：イレギュラーな要件があった際に対応しやすく、柔軟性のあるPRECSSを採用<br>
+●&nbsp;CSS設計　 ：PRECSSを採用(イレギュラーな要件があった際に対応しやすく、柔軟性のある為)<br>
 ●&nbsp;ソースコード管理：GitHub<br>
 ●&nbsp;フォント：フォントは存在感のある を採用しました。<br>
 <br>
