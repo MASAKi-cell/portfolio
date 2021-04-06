@@ -2,7 +2,7 @@
 Ver1.01
 <br>
 <br>
-● 成果物 : http://takahashi-masaki-portfolio.blue
+● 製作サイト : http://takahashi-masaki-portfolio.blue
 <br>
 ## 概要 ##
 <br>
