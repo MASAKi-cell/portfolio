@@ -1,6 +1,10 @@
-# 転職活動用のポートフォリオサイト
+# 転職活動用のポートフォリオサイト #
 Ver1.01
 <br>
+<br>
+
+● 成果物 ⇒ http://takahashi-masaki-portfolio.blue
+
 <br>
 ## 概要 ##
 <br>
